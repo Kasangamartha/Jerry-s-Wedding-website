@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding of Adonai & Keziah</title>
+
+  <!-- Fonts & Icons -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Overlay -->
+  <div id="audio-overlay">
+    <button onclick="playAudio()">View Invitation</button>
+  </div>
+
+  <!-- Background Music -->
+
+  <audio id="bg-music" loop>
+    <source src="invitesong.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Invitation Content -->
+
+<!-- ---------- DETAILS ---------- -->
+<section id="detailsSection" class="section-block fade-in">
+  <img src="LOGO12.png" alt="Wedding Logo" class="wedding-logo">
+  <p class="section-text">
+    We joyfully invite you to celebrate with us as we begin our life together.  
+    Ceremony starts at <strong>10:00 AM</strong> — please arrive by <strong>9:30 AM</strong>.
+  </p>
+</section>
+
+<!-- ---------- DRESS CODE ---------- -->
+<section id="dresscodeSection" class="section-block fade-in">
+  <h2 class="section-title">Dress Code</h2>
+  <p class="section-text">
+    Elegant • Pastel tones encouraged • Comfortable shoes for dancing.
+  </p>
+</section>
+
+<!-- ---------- GIFTS ---------- -->
+<section id="giftsSection" class="section-block fade-in">
+  <h2 class="section-title">Gifts</h2>
+  <p class="section-text">
+    Your presence is our greatest gift. If you'd like to give, the couple prefers
+    contributions toward experiences. (Registry link or details can be placed here.)
+  </p>
+</section>
+
+<!-- ---------- PROGRAM ---------- -->
+<section id="programSection" class="section-block fade-in">
+  <h2 class="section-title">Wedding Program</h2>
+  <div class="timeline">
+    <div class="event"><div class="icon"><i class="fa-solid fa-people-group"></i></div><div class="details"><div class="time">9:30 AM</div><div class="title">Arrival of Guests</div></div></div>
+    <div class="event left"><div class="icon"><i class="fa-solid fa-church"></i></div><div class="details"><div class="time">10:00 AM</div><div class="title">Wedding Service Begins</div></div></div>
+    <div class="event"><div class="icon"><i class="fa-solid fa-person-dress"></i></div><div class="details"><div class="time">10:30 AM</div><div class="title">Bridal March</div></div></div>
+    <div class="event left"><div class="icon"><i class="fa-solid fa-ring"></i></div><div class="details"><div class="time">11:00 AM</div><div class="title">Exchange of Vows</div></div></div>
+    <div class="event"><div class="icon"><i class="fa-solid fa-camera-retro"></i></div><div class="details"><div class="time">12:00 PM</div><div class="title">Photos & Transition</div></div></div>
+    <div class="event left"><div class="icon"><i class="fa-solid fa-utensils"></i></div><div class="details"><div class="time">1:00 PM</div><div class="title">Lunch</div></div></div>
+    <div class="event"><div class="icon"><i class="fa-solid fa-champagne-glasses"></i></div><div class="details"><div class="time">2:00 PM</div><div class="title">Reception Begins</div></div></div>
+    <div class="event left"><div class="icon"><i class="fa-solid fa-microphone-lines"></i></div><div class="details"><div class="time">3:00 PM</div><div class="title">Speeches & Toasts</div></div></div>
+    <div class="event"><div class="icon"><i class="fa-solid fa-cake-candles"></i></div><div class="details"><div class="time">4:00 PM</div><div class="title">Cake Cutting</div></div></div>
+    <div class="event left"><div class="icon"><i class="fa-solid fa-music"></i></div><div class="details"><div class="time">5:00 PM</div><div class="title">Special Dance</div></div></div>
+    <div class="event"><div class="icon"><i class="fa-solid fa-hands-praying"></i></div><div class="details"><div class="time">6:00 PM</div><div class="title">Vote of Thanks & Blessing</div></div></div>
+  </div>
+</section>
+
+<!-- ---------- DIRECTIONS ---------- -->
+<section id="locationSection" class="section-block fade-in">
+  <h2 class="section-title">Directions</h2>
+  <p class="section-text">
+    Scan the QR code or click the map to open Google Maps (Leilani Gardens, Kikuyu).
+  </p>
+
+  <div class="location-wrapper">
+    <div class="location-box qr-box">
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?data=https://maps.app.goo.gl/jX2fXj26iRJH67rV8"
+        alt="Wedding Location QR Code"
+        class="location-qr">
+      <p class="map-caption">📱 Scan to open in Maps</p>
+    </div>
+
+    <div class="location-box map-box">
+      <div class="map-wrapper">
+        <a href="https://maps.app.goo.gl/jX2fXj26iRJH67rV8"
+           target="_blank"
+           class="map-overlay"
+           title="Open Leilani Gardens in Google Maps"></a>
+        <iframe
+          src="https://www.google.com/maps?q=Leilani+Gardens,+Kikuyu,+Kenya&z=18&output=embed"
+          class="embedded-map"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <p class="map-caption">📍 Leilani Gardens, Kikuyu</p>
+    </div>
+  </div>
+
+  <div class="map-button-container">
+    <a href="https://maps.app.goo.gl/jX2fXj26iRJH67rV8"
+       target="_blank"
+       class="map-link">
+       Open in Google Maps
+    </a>
+  </div>
+</section>
+
+<!-- ---------- RSVP ---------- -->
+<section id="rsvp">
+  <h2>RSVP</h2>
+  <p>Kindly respond by 26 May 2025</p>
+
+  <h3>Will you be attending?</h3>
+  <div class="attendance-options">
+    <div class="option" id="accept">
+      <i class="heart">❤️</i>
+      <span>Happily Accept</span>
+    </div>
+    <div class="option" id="decline">
+      <i class="broken-heart">💔</i>
+      <span>Regretfully Decline</span>
+    </div>
+  </div>
+
+  <div id="guest-info" style="display:none;">
+    <h3>Guest Info</h3>
+    <label for="guestCount">Number of Guests</label>
+    <select id="guestCount">
+      <option value="">Select...</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+    <div id="guestNamesContainer"></div>
+  </div>
+
+  <h3>Contact Info</h3>
+  <form id="rsvpForm">
+    <label for="name">Name</label>
+    <input type="text" id="name" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required>
+
+    <button type="submit">Submit →</button>
+  </form>
+</section>
+
+<p id="response-msg"></p>
+<p><a href="index.html" class="btn">Back to Home</a></p>
+```
+
+  </div>
+
+  <script>
+    // 🎵 Play song
+    function playAudio() {
+      const music = document.getElementById('bg-music');
+      music.play();
+      document.getElementById('audio-overlay').style.display = 'none';
+      document.getElementById('invitation-content').style.display = 'block';
+    }
+
+    // 🎯 RSVP Logic
+    const accept = document.getElementById('accept');
+    const decline = document.getElementById('decline');
+    const guestInfo = document.getElementById('guest-info');
+    const guestCountSelect = document.getElementById('guestCount');
+    const guestNamesContainer = document.getElementById('guestNamesContainer');
+    let response = "";
+
+    accept.addEventListener('click', () => {
+      accept.classList.add('selected');
+      decline.classList.remove('selected');
+      guestInfo.style.display = 'block';
+      response = "Happily Accept";
+    });
+
+    decline.addEventListener('click', () => {
+      decline.classList.add('selected');
+      accept.classList.remove('selected');
+      guestInfo.style.display = 'none';
+      guestNamesContainer.innerHTML = '';
+      response = "Regretfully Decline";
+    });
+
+    guestCountSelect.addEventListener('change', () => {
+      const count = parseInt(guestCountSelect.value);
+      guestNamesContainer.innerHTML = '';
+      for (let i = 1; i <= count; i++) {
+        const label = document.createElement('label');
+        label.textContent = `Guest ${i} Name`;
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.placeholder = `Enter Guest ${i} Name`;
+        input.name = `guest${i}`;
+        input.required = true;
+        guestNamesContainer.appendChild(label);
+        guestNamesContainer.appendChild(input);
+      }
+    });
+
+    // 📨 Google Sheets Integration
+    const form = document.getElementById('rsvpForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const guestInputs = guestNamesContainer.querySelectorAll('input');
+      const guestNames = Array.from(guestInputs).map(i => i.value).join(', ');
+
+      const formData = new FormData();
+      formData.append("Name", document.getElementById('name').value);
+      formData.append("Phone", document.getElementById('phone').value);
+      formData.append("Number_of_Guests", guestCountSelect.value || "");
+      formData.append("Guest_Names", guestNames);
+      formData.append("Email", document.getElementById('email').value);
+      formData.append("Timestamp", new Date().toLocaleString());
+      formData.append("Response", response);
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxLQtrqd5hswICgvv0S_gYu8a9d6xulIVbVEH2aOn-AhayKN9duJvUC_9O8Z_iRLZMh/exec";
+
+      try {
+        const res = await fetch(scriptURL, { method: "POST", body: formData });
+        if (res.ok) {
+          alert("Thank you! Your RSVP has been submitted.");
+          form.reset();
+          guestInfo.style.display = 'none';
+          guestNamesContainer.innerHTML = '';
+        } else {
+          alert("There was an error submitting your RSVP. Please try again.");
+        }
+      } catch (error) {
+        alert("There was an error submitting your RSVP. Please try again.");
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #fffafc, #fff5f8, #fff);
+  color: #000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Section Layout === */
+.section-block {
+  margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* === Headings === */
+h1 {
+  font-family: "Allura", cursive;
+  font-size: 3.2em;
+  color: #b59a5f;
+  margin-bottom: 6px;
+  font-weight: 400;
+  text-shadow: 0 0 10px rgba(181,154,95,0.25);
+}
+
+.section-sub {
+  font-weight: 600;
+  color: #555;
+  margin: 6px 0 10px;
+}
+
+.section-title {
+  font-family: "Allura", cursive;
+  font-size: 2.2em;
+  color: #b59a5f;
+  text-shadow: 0 0 8px rgba(181,154,95,0.25);
+  margin-bottom: 10px;
+}
+
+.section-text {
+  color: #555;
+  max-width: 650px;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+
+/* === Logo === */
+.wedding-logo {
+  width: 300px;
+  height: 70%;
+  opacity: 0.8;
+  mix-blend-mode: lighten; /* makes it softly merge with background */
+  margin-bottom: 14px;
+}
+
+.wedding-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+
+/* === Timeline (Program) === */
+.timeline {
+  position: relative;
+  margin-top: 18px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  background: linear-gradient(180deg, #b59a5f, #f0d9b5, #b59a5f);
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+.event {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+.event.visible { opacity: 1; transform: translateY(0); }
+.event.left { flex-direction: row-reverse; }
+.icon {
+  flex: 1;
+  text-align: right;
+  padding-right: 40px;
+  color: #b59a5f;
+  font-size: 2.2em;
+}
+.event.left .icon { text-align: left; padding-left: 40px; }
+.details {
+  flex: 1;
+  text-align: left;
+  padding-left: 40px;
+}
+.event.left .details { text-align: right; padding-right: 40px; }
+.time { font-weight: 700; color: #000; font-style: italic; }
+.title { font-family: "Allura", cursive; color: #b59a5f; font-size: 1.6em; }
+
+/* === Map & QR === */
+.location-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+.location-box { text-align: center; }
+.location-qr {
+  border: 4px solid #b59a5f;
+  border-radius: 10px;
+  width: 220px;
+  height: 220px;
+}
+.map-wrapper { position: relative; border-radius: 10px; overflow: hidden; }
+.embedded-map {
+  width: 300px;
+  height: 220px;
+  border: 4px solid #b59a5f;
+  border-radius: 10px;
+}
+.map-caption { color: #555; margin-top: 10px; }
+.map-link {
+  border: 1px solid #b59a5f;
+  padding: 10px 25px;
+  color: #b59a5f;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.map-link:hover { background: #b59a5f; color: white; }
+.section-block:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 40px auto 0;
+  background: linear-gradient(to right, transparent, #b59a5f, transparent);
+  opacity: 0.3;
+}
+
+/* === RSVP === */
+.rsvp-section {
+  text-align: center;
+  border-top: 1px solid rgba(181,154,95,0.12);
+  padding-top: 30px;
+}
+.rsvp-title {
+  font-family: "Allura", cursive;
+  color: #b59a5f;
+  font-size: 2.4em;
+}
+.rsvp-form { max-width: 500px; display: grid; gap: 10px; margin: 0 auto; }
+.rsvp-form input, .rsvp-form textarea, .rsvp-form select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+.rsvp-button {
+  background: #b59a5f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.rsvp-button:hover { background: #a3833f; }
+.rsvp-msg { margin-top: 10px; color: #2b7a2b; }
+
+.fade-in { opacity: 0; transform: translateY(20px); transition: all 0.9s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }

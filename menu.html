@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Jerry & Keziah Wedding Invitation</title>
+
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<!-- External Stylesheet -->
+<link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+  <div class="content-wrapper">
+
+    <!-- ---------- DETAILS ---------- -->
+    <section id="detailsSection" class="section-block fade-in">
+      <img src="LOGO12.png" alt="Wedding Logo" class="wedding-logo">
+      <p class="section-text">
+        We joyfully invite you to celebrate with us as we begin our life together.  
+        Ceremony starts at <strong>10:00 AM</strong> — please arrive by <strong>9:30 AM</strong>.
+      </p>
+    </section>
+
+    <!-- ---------- DRESS CODE ---------- -->
+    <section id="dresscodeSection" class="section-block fade-in">
+      <h2 class="section-title">Dress Code</h2>
+      <p class="section-text">
+        Elegant • Pastel tones encouraged • Comfortable shoes for dancing.
+      </p>
+    </section>
+
+    <!-- ---------- GIFTS ---------- -->
+    <section id="giftsSection" class="section-block fade-in">
+      <h2 class="section-title">Gifts</h2>
+      <p class="section-text">
+        Your presence is our greatest gift. If you'd like to give, the couple prefers
+        contributions toward experiences. (Registry link or details can be placed here.)
+      </p>
+    </section>
+
+    <!-- ---------- PROGRAM ---------- -->
+    <section id="programSection" class="section-block fade-in">
+      <h2 class="section-title">Wedding Program</h2>
+
+      <div class="timeline">
+        <div class="event"><div class="icon"><i class="fa-solid fa-people-group"></i></div><div class="details"><div class="time">9:30 AM</div><div class="title">Arrival of Guests</div></div></div>
+        <div class="event left"><div class="icon"><i class="fa-solid fa-church"></i></div><div class="details"><div class="time">10:00 AM</div><div class="title">Wedding Service Begins</div></div></div>
+        <div class="event"><div class="icon"><i class="fa-solid fa-person-dress"></i></div><div class="details"><div class="time">10:30 AM</div><div class="title">Bridal March</div></div></div>
+        <div class="event left"><div class="icon"><i class="fa-solid fa-ring"></i></div><div class="details"><div class="time">11:00 AM</div><div class="title">Exchange of Vows</div></div></div>
+        <div class="event"><div class="icon"><i class="fa-solid fa-camera-retro"></i></div><div class="details"><div class="time">12:00 PM</div><div class="title">Photos & Transition</div></div></div>
+        <div class="event left"><div class="icon"><i class="fa-solid fa-utensils"></i></div><div class="details"><div class="time">1:00 PM</div><div class="title">Lunch</div></div></div>
+        <div class="event"><div class="icon"><i class="fa-solid fa-champagne-glasses"></i></div><div class="details"><div class="time">2:00 PM</div><div class="title">Reception Begins</div></div></div>
+        <div class="event left"><div class="icon"><i class="fa-solid fa-microphone-lines"></i></div><div class="details"><div class="time">3:00 PM</div><div class="title">Speeches & Toasts</div></div></div>
+        <div class="event"><div class="icon"><i class="fa-solid fa-cake-candles"></i></div><div class="details"><div class="time">4:00 PM</div><div class="title">Cake Cutting</div></div></div>
+        <div class="event left"><div class="icon"><i class="fa-solid fa-music"></i></div><div class="details"><div class="time">5:00 PM</div><div class="title">Special Dance</div></div></div>
+        <div class="event"><div class="icon"><i class="fa-solid fa-hands-praying"></i></div><div class="details"><div class="time">6:00 PM</div><div class="title">Vote of Thanks & Blessing</div></div></div>
+      </div>
+    </section>
+
+    <!-- ---------- DIRECTIONS (QR + Map) ---------- -->
+    <section id="locationSection" class="section-block fade-in">
+      <h2 class="section-title">Directions</h2>
+      <p class="section-text">
+        Scan the QR code or click the map to open Google Maps (Leilani Gardens, Kikuyu).
+      </p>
+
+      <div class="location-wrapper">
+        <div class="location-box qr-box">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?data=https://maps.app.goo.gl/jX2fXj26iRJH67rV8"
+            alt="Wedding Location QR Code"
+            class="location-qr"
+          >
+          <p class="map-caption">📱 Scan to open in Maps</p>
+        </div>
+
+        <div class="location-box map-box">
+          <div class="map-wrapper">
+            <a href="https://maps.app.goo.gl/jX2fXj26iRJH67rV8"
+               target="_blank"
+               class="map-overlay"
+               title="Open Leilani Gardens in Google Maps"></a>
+            <iframe
+              src="https://www.google.com/maps?q=Leilani+Gardens,+Kikuyu,+Kenya&z=18&output=embed"
+              class="embedded-map"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <p class="map-caption">📍 Leilani Gardens, Kikuyu</p>
+        </div>
+      </div>
+
+      <div class="map-button-container">
+        <a href="https://maps.app.goo.gl/jX2fXj26iRJH67rV8"
+           target="_blank"
+           class="map-link">
+           Open in Google Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- ---------- RSVP ---------- -->
+    <section id="rsvpSection" class="rsvp-section section-block fade-in">
+      <h2 class="rsvp-title">Will You Be Joining Us?</h2>
+      <form id="rsvp-form" class="rsvp-form" onsubmit="return handleRSVP(event)">
+        <div class="form-row">
+          <input type="text" id="rsvp-name" name="name" placeholder="Full name" required>
+        </div>
+        <div class="form-row">
+          <input type="email" id="rsvp-email" name="email" placeholder="Email (optional)">
+        </div>
+        <div class="form-row inline">
+          <label><input type="radio" name="attend" value="yes" checked> Yes</label>
+          <label><input type="radio" name="attend" value="no"> No</label>
+          <label style="margin-left:12px">Guests:
+            <select id="rsvp-guests" name="guests">
+              <option>0</option><option>1</option><option>2</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <textarea id="rsvp-note" name="note" rows="2" placeholder="Message (optional)"></textarea>
+        </div>
+        <button type="submit" class="rsvp-button">Send RSVP</button>
+        <div id="rsvp-msg" class="rsvp-msg" aria-live="polite"></div>
+      </form>
+    </section>
+
+  </div>
+
+<script>
+  const revealOnScroll = () => {
+    const items = document.querySelectorAll('.event, .fade-in');
+    const trigger = window.innerHeight * 0.85;
+    items.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < trigger) el.classList.add('visible');
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+
+  function handleRSVP(e) {
+    e.preventDefault();
+    const name = document.getElementById('rsvp-name').value.trim() || 'Guest';
+    const attend = document.querySelector('input[name="attend"]:checked').value;
+    const msg = document.getElementById('rsvp-msg');
+    msg.textContent = `Thanks ${name}! Your RSVP (${attend === 'yes' ? 'Attending' : 'Not attending'}) has been noted.`;
+    msg.style.color = '#2b7a2b';
+    return false;
+  }
+</script>
+</body>
+</html>
