@@ -21,49 +21,69 @@
       --burgundy: #7b2a3b;
     }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: "Poppins", sans-serif;
-      background: #fff;
-      color: #333;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
+   html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;            /* make sure 100% height works correctly */
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #333;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
-    /* ===== COVER SECTION ===== */
-    #cover {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      background: rgba(0,0,0,0.6);
-      z-index: 10;
-      transition: opacity 1s ease, visibility 1s ease;
-    }
+/* ------------------------------
+   FULLSCREEN VIDEO COVER
+--------------------------------*/
+#cover {
+  position: fixed;
+  inset: 0;
+  background: rgb(240, 236, 233);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  transition: opacity 1s ease, visibility 1s ease;
+}
 
-    #cover.hidden {
-      opacity: 0;
-      visibility: hidden;
-    }
+#cover.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 
-    #cover video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-      filter: brightness(60%);
-    }
+/* VIDEO CENTERED PROPERLY */
+#cover video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* shows entire video */
+}
+
+/* BUTTON */
+#view-invite-btn {
+  position: absolute;
+  top: 50;
+  background: #7b2a3b;
+  color: white;
+  padding: 15px 40px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+@media (max-width : 768px){
+  #view-invite-btn{
+    position: absolute;
+    top:40%;
+  }
+}
+
+/* ------------------------------
+   HIDE INVITATION UNTIL CLICKED
+--------------------------------*/
+
 
     #view-invite-btn {
       background: linear-gradient(135deg, var(--burgundy), var(--peach));
@@ -86,7 +106,7 @@
 
     @keyframes pulse {
       0%, 100% {
-        transform: scale(1);
+       transform: scale(1);
         box-shadow: 0 0 10px rgba(123, 42, 59, 0.4);
       }
       50% {
@@ -189,6 +209,14 @@ body::after {
   padding-bottom: 3px;
 }
 
+@media (max-width : 768px) {
+
+  .section-title-inline{
+    font-size: 35px;
+  }
+  
+}
+
     .section-block:not(:last-child)::after {
       content: "";
       display: block;
@@ -201,12 +229,20 @@ body::after {
     }
 
     /* === Logo === */
-    .wedding-logo {
-      width: 500px;
-      height: 60%;
-      margin-bottom: 14px;
-    
+
+    .wedding-logo-container{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+    .wedding-logo {
+            width: 500px;
+      height: 60%;
+      margin-bottom: 14px; 
+    }
+
+ 
 
     /* === Timeline === */
     .timeline {
@@ -228,6 +264,14 @@ body::after {
       bottom: 0;
       transform: translateX(-50%);
       border-radius: 3px;
+    }
+
+       @media (max-width:768px) {
+
+        .timeline{
+          font-size: 14px;
+        }
+
     }
 
     .event {
@@ -438,6 +482,7 @@ body::after {
       justify-content: center;
       gap: 30px;
       margin-bottom: 15px;
+      
     }
 
     .option {
@@ -447,6 +492,7 @@ body::after {
       border-radius: 20px;
       transition: all .3s ease;
       color: var(--burgundy);
+      background-color: var(--sage);
     }
 
     .option:hover, .option.selected {
@@ -674,7 +720,7 @@ body::after {
   <!-- VIDEO COVER -->
   <div id="cover">
     <video autoplay muted loop playsinline id="bg-video">
-      <source src="Video3K.mp4" type="video/mp4">
+      <source src="https://res.cloudinary.com/dyxvw9hlk/video/upload/v1763465278/Video3K_ihzvqk.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
     <button id="view-invite-btn">View Invitation</button>
@@ -689,7 +735,11 @@ body::after {
   <div id="invitation-content">
     <section id="detailsSection" class="section-block fade-in">
       <h1>TOGETHER WITH THEIR FAMILIES</h1>
-      <img src="LatestLOGO2.png" alt="Wedding Logo" class="wedding-logo">
+
+      <div class="wedding-logo-container">
+          <img src="LatestLOGO2.png" alt="Wedding Logo" class="wedding-logo">
+      </div>
+      
       <p class="section-text">
         Joyfully invite you to celebrate with us as we begin our life together.<br>
         Ceremony starts at <strong>10:30 AM</strong> — please arrive by <strong>9:30 AM</strong>.
