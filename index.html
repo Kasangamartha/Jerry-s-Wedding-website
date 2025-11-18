@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,,400;1,500;1,600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap" rel="style">
 
   <style>
     /* === BASE COLORS === */
@@ -77,11 +78,6 @@
       margin-top: 160px;
       letter-spacing: 1px;
     }
-    img, video {
-  max-width: 100%;
-  height: auto;
-}
-
 
     #view-invite-btn:hover {
       background: linear-gradient(135deg, var(--peach), var(--burgundy));
@@ -218,11 +214,13 @@ body::after {
       margin: 40px auto;
       max-width: 900px;
       padding-top: 20px;
+      justify-content: center;
     }
 
     .timeline::before {
       content: "";
       position: absolute;
+      justify-content: center;
       left: 50%;
       width: 3px;
       background: linear-gradient(180deg, var(--burgundy), var(--peach), var(--sage));
@@ -237,6 +235,7 @@ body::after {
       align-items: center;
       justify-content: space-between;
       margin: 45px 0;
+       justify-content: center;
     }
 
     .event.left {
@@ -249,6 +248,7 @@ body::after {
       padding-right: 45px;
       color: black;
       font-size: 2.5em;
+       justify-content: center;
     }
 
     .event.left .icon {
@@ -277,6 +277,7 @@ body::after {
     .event::before {
       content: "";
       position: absolute;
+      justify-content: center;
       left: 50%;
       width: 16px;
       height: 16px;
@@ -446,7 +447,6 @@ body::after {
       border-radius: 20px;
       transition: all .3s ease;
       color: var(--burgundy);
-       background: var(--sage);
     }
 
     .option:hover, .option.selected {
@@ -490,12 +490,74 @@ body::after {
       .event::before { left: 8px; }
     }
 
+.bible-verse {
+   max-width: 480px;
+    margin: 30px auto;
+    padding: 18px 22px;   /* Reduced padding */
+    text-align: center;
+    background: #fff8f3;
+    border-radius: 16px;
+    border: 3px solid #d6b98c;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    font-family: "IBM Plex Serif", serif;
+    position: relative;
+
+}
+
+/* Floral corners */
+.bible-verse:before,
+.bible-verse:after {
+    content: "✿";
+    position: absolute;
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #c4879f;
+}
+
+/* Top-left floral */
+.bible-verse:before {
+    top: -14px;
+    left: -14px;
+}
+
+/* Bottom-right floral */
+.bible-verse:after {
+    bottom: -14px;
+    right: -14px;
+}
+
+.verse-text {
+      font-size: 20px;      /* Slightly smaller */
+    line-height: 1.3;     /* Reduced spacing between lines */
+    color: var(--burgundy);
+    font-style: italic;
+    margin-bottom: 6px;
+}
+
+.verse-ref {
+     font-size: 16px;
+    margin-top: 2px;
+    color: #7a5d53;
+    font-style: italic;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .verse-text {
+        font-size: 20px;
+    }
+    .verse-ref {
+        font-size: 16px;
+    }
+}
+
+
     /* === GALLERY SECTION === */
 .gallery-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 0 10px;
 }
 
@@ -604,6 +666,7 @@ body::after {
 }
 
 
+
   </style>
 </head>
 
@@ -629,11 +692,12 @@ body::after {
       <img src="LatestLOGO2.png" alt="Wedding Logo" class="wedding-logo">
       <p class="section-text">
         Joyfully invite you to celebrate with us as we begin our life together.<br>
-        Ceremony starts at <strong>10:00 AM</strong> — please arrive by <strong>9:30 AM</strong>.
+        Ceremony starts at <strong>10:30 AM</strong> — please arrive by <strong>9:30 AM</strong>.
       </p>
     </section>
 
     <section id="dresscodeSection" class="section-block fade-in">
+
       <h2>Dress Code</h2>
       <p class="section-text">Our primary theme colors: <b>Sage Green, Peach, Plum/burgundy, White, and Gold.</b>
 
@@ -855,6 +919,15 @@ To complement our theme, we encourage our guests to choose attire in muted tones
       }
     });
   </script>
+  <section class="bible-verse">
+    <p class="verse-text">
+        “Wherever you go, I will go, and wherever you lodge, I will lodge.  
+        Your people shall be my people, and your God, my God.  
+        May the Lord do so to me, and more also, if anything but death parts you and me.”
+    </p>
+    <p class="verse-ref">— Ruth 1:16–17 (NKJV)</p>
+</section>
+
   <!-- GALLERY SECTION -->
 <section id="gallerySection" class="section-block fade-in">
   <h2 class="section-title-inline">
@@ -865,11 +938,11 @@ To complement our theme, we encourage our guests to choose attire in muted tones
 
   <div class="gallery-container">
     <img src="pic1.jpeg" alt="Adonai & Keziah" class="gallery-item">
-    <img src="pic2.jpg" alt="Wedding Moment" class="gallery-item">
+    <img src="rec1.jpg" alt="Wedding Moment" class="gallery-item">
     <img src="pic3.jpeg" alt="Wedding Decor" class="gallery-item">
-    <img src="pic4.jpeg" alt="Friends & Family" class="gallery-item">
+    <img src="rec2.jpg" alt="Friends & Family" class="gallery-item">
     <img src="pic2.jpg" alt="Reception" class="gallery-item">
-    <img src="pic1.jpeg" alt="Couple Portrait" class="gallery-item">
+    <img src="rec3.jpg" alt="Couple Portrait" class="gallery-item">
   </div>
 </section>
 <p id="response-msg"></p>
